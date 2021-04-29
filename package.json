@@ -1,6 +1,7 @@
 {
   "name": "github_issue_export",
   "version": "0.0.0",
+  "homepage": "https://birdey88.github.io/github_issue_export/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
