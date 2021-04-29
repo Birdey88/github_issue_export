@@ -41,7 +41,6 @@ export const FilterIssuesFromRepo = (repo, params, page) => (dispatch) => {
       },
     })
     .then((res) => {
-      console.info(res);
       dispatch({
         type: actionTypes.ISSUES_GET_DATA,
         payload: {

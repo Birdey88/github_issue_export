@@ -1,8 +1,6 @@
 import React from "react";
 import { Navbar, Nav, NavLink } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
-console.log(window.location);
 export default function NavigationBar() {
   return (
     <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark" style={{ marginBottom: 10 }}>
