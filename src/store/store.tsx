@@ -3,13 +3,16 @@ import thunk from "redux-thunk";
 import rootReducer from "./reducers/rootReducer";
 import logger from "./middleware/logger";
 
-const middleware = [thunk, logger];
+const middleware = [thunk];
+if (import.meta.env.MODE == "development")
+  middleware.push(logger);
+
 const composeEnhancers =
   typeof window === "object" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-        trace: true,
-        traceLimit: 25,
-      })
+      trace: true,
+      traceLimit: 25,
+    })
     : compose;
 
 const enhancer = composeEnhancers(applyMiddleware(...middleware));

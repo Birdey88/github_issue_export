@@ -1,7 +1,7 @@
 {
   "name": "github_issue_export",
   "version": "0.0.0",
-  "homepage": "https://birdey88.github.io/github_issue_export/",
+  "homepage": "https://github-issue-export.vercel.app/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
