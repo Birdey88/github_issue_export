@@ -6,9 +6,9 @@ const token = authHelper.GetTokenFromStorage();
 const instance = axios.create({
   baseURL: "https://api.github.com/",
   headers: {
-    Authorization: `Bearer ${token}`,
-    "Access-Control-Allow-Origin": "*"
+    Authorization: `Bearer ${token}`
   },
+  withCredentials: true
 });
 
 export default instance;

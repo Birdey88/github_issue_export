@@ -14,8 +14,8 @@ function App() {
     <Provider store={store}>
       <Router>
         <Switch>
-          <PrivateRoute exact path="/" component={Dashboard} />
-          <Route exact path="/Auth" component={Auth} />
+          <PrivateRoute exact path="/" component={Auth} />
+          <Route exact path="/Auth" component={Dashboard} />
           <PrivateRoute exact path="/Repos" component={Repos} />
           <PrivateRoute exact path="/Issues/:id/:repoName" component={Issues} />
           <PrivateRoute exact path="/Export/:id/:repoName" component={Export} />
