@@ -12,16 +12,17 @@ export default function ExportSimple({ formData }) {
       <Table striped bordered hover>
         <thead>
           <tr>
-            {formData.number && <th>Number</th>}
+            {formData.number && <th>GitHub Issue Number</th>}
             {formData.title && <th>Title</th>}
             {formData.state && <th>State</th>}
             {formData.milestone && <th>Milestone</th>}
             {formData.createdDate && <th>Created Date</th>}
+            <th>Comments</th>
           </tr>
         </thead>
         <tbody>
           {issuesList &&
-            issuesList.sort(dynamicSort("-state")).map((issue) => {
+            issuesList.sort(dynamicSort("-number")).map((issue) => {
               return (
                 <tr key={issue.id}>
                   {formData.number && <td>#{issue.number}</td>}
@@ -31,6 +32,7 @@ export default function ExportSimple({ formData }) {
                   {formData.createdDate && (
                     <td>{new Date(issue.created_at).toLocaleDateString()}</td>
                   )}
+                  <td></td>
                 </tr>
               );
             })}
